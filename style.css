@@ -6,12 +6,14 @@
 :root{
     --maincolor : #1d3670;
     --logoright : #6363db;
-    --logoleft :  #02062c;
+    --logoleft :  #040b4e;
+    --text : #6363db;
 }
 .darktheme{
-    --maincolor : #ccc;
-    --logoright : #393943;
-    --logoleft :  #000000;
+    --maincolor : #000;
+    --logoright : #515160;
+    --logoleft :  #3c3232;
+    --text : #000
 }
 .nanv{
     background-color: var(--maincolor);
@@ -55,7 +57,7 @@ button{
 }
 .logo:hover::after{
     transform: rotate(1turn);
-    border-color: #3795BD #3795BD #990b0b #990b0b;
+    border-color: #3795BD #3795BD #261e3b #261e3b;
 }
 .logo:hover{
     color: #3795BD;
@@ -67,11 +69,11 @@ button{
 .sign-in,
 .sign-up {
     
-    background-color: #816262;
+    background-color: var(--logoright);
     border-radius: 2px;
 }
 .sign-in:hover{
-    background-color: #6363db;
+    background-color: #565d9b;
 }
 .sign-up:hover{
     background-color: #565d9b;
@@ -84,7 +86,7 @@ button{
     color: white !important;
 }
 #home{
-    background-color: #816262;
+    background-color: var(--logoright);
 }
 #home:hover a {
     color: white !important;
@@ -104,7 +106,7 @@ button{
     background-color: rgba(36, 45, 86, 0.592); 
     color: rgb(215, 228, 228);
     font-weight: bold;
-    border: 3px solid #f1f1f1;
+    border: 3px solid var(--logoright);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -118,20 +120,21 @@ button{
     transition: 1s;
 }
 .text:hover{
-    border-color: #6363db;
-    box-shadow: 3px 3px 1px -1px rgb(255, 255, 255) , -3px -3px 1px -1px rgb(255, 255, 255);
+    border-color: var(--logoleft);
+    box-shadow: 3px 3px 1px 1px var(--maincolor) , -3px -3px 1px 1px var(--maincolor);
 }
 .text p span{
     font-size: 3.6vh;
-    color: #0a3cdd;
+    color: var(--text);
 }
 #darkmodebtn{
     padding: 4px;
 }
 #darkmode{
     width: 30px;
-    
-    
+}
+.boxdark{
+    filter: grayscale(50%) blur(10px);
 }
 @media(min-width: 200px)and (max-width: 770px){
     .navo li{
