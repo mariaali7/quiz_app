@@ -151,4 +151,7 @@ button{
     .text{
         margin-top: 40px;
     }
+    #darkmodebtn{
+        display: none;
+    }
 }
