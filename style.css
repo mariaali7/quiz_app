@@ -151,6 +151,12 @@ button{
     .text{
         margin-top: 40px;
     }
+    .text p {
+        font-size: 60%
+    }
+    p span{
+        font-size: 1.8vh !important;
+    }
     #darkmodebtn{
         display: none;
     }

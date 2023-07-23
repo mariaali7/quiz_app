@@ -8,10 +8,10 @@ let photo = document.querySelector("#darkmode")
 dark.onclick = function () {
     document.body.classList.toggle("darktheme");
     box.classList.toggle("boxdark")
-    if(document.body.classList.contains("darkthem")){
-        photo.setAttribute("src" , "sun.png");
+    if(document.body.classList.contains("darktheme")){
+        photo.src = "sun.png"
     }
     else{
-        photo.setAttribute("src" , "moon.png")
+        photo.src = "moon.png"
     }
 }
