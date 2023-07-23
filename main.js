@@ -7,7 +7,7 @@ let box = document.querySelector("#box")
 let photo = document.querySelector("#darkmode")
 dark.onclick = function () {
     document.body.classList.toggle("darktheme");
-    box.classList.toggle("boxdark")
+    // box.classList.toggle("boxdark")
     if(document.body.classList.contains("darktheme")){
         photo.src = "sun.png"
     }
@@ -15,3 +15,4 @@ dark.onclick = function () {
         photo.src = "moon.png"
     }
 }
+

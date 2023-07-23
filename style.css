@@ -133,9 +133,9 @@ button{
 #darkmode{
     width: 30px;
 }
-.boxdark{
+/* .boxdark{
     filter: grayscale(50%) blur(10px);
-}
+} */
 @media(min-width: 200px)and (max-width: 770px){
     .navo li{
         text-align: center;
