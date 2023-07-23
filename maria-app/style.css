@@ -23,10 +23,10 @@ body{
 .quiz{
     padding: 1%;
 }
-.header h1{
+#he{
     border-bottom: .3vh solid black;
     /* padding-bottom: 4vh; */
-    font-size: 6vh;
+    font-size: 7vh;
 }
 #question{
     font-size: 4vh;
@@ -48,12 +48,17 @@ body{
     margin:2% 0 auto;
     border-radius: 4px;
 }
-.btn:hover{
-    background-color: #001e4d;
+
+.btn:hover:not([disabled]){
+    background-color: #222;
     color: white;
 }
+
+btn:disabled{
+    cursor: no-drop;
+}
 #next-btn{
-    background-color: #001e4d;
+    background-color: #222;
     color: #fff;
     font-weight: 500;
     width: 9vw;
@@ -66,4 +71,12 @@ body{
     margin-left: 17vw;
     font-size: 2vh;
     display: none;
+}
+
+.correct{
+    background-color:#9aeabc ;
+}
+
+.incorrect{
+    background-color:#ff9393 ;
 }

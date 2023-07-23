@@ -14,7 +14,7 @@ const questions = [
         {text: " <css>"  , correct: "false"},
         {text: " <!DOCTYPE html>"  , correct: "false"},
         {text: " <script>"  , correct: "false"},
-        {text: "<style>"  , correct: "true"}
+        {text: " <style>"  , correct: "true"}
     ]
 },
 {
@@ -23,7 +23,7 @@ const questions = [
         {text: " tag"  , correct: "false"},
         {text: " id"  , correct: "false"},
         {text: " class"  , correct: "true"},
-        {text: "both class and tag"  , correct: "false"}
+        {text: " ++both class and tag"  , correct: "false"}
     ]
 },
 {
@@ -36,7 +36,7 @@ const questions = [
     ]
 },
 {
-    question : " Which of the following CSS framework is used to create a responsive design?",
+    question : "Which of the following CSS framework is used to create a responsive design?",
     answers : [
         {text: " django"  , correct: "false"},
         {text: " rails"  , correct: "false"},
@@ -96,8 +96,9 @@ const questions = [
 
 
 const questionElement = document.getElementById("question");
-const assswerElement = document.getElementById("answer-btn");
+const answerButton = document.getElementById("answer-btn");
 const nextButton = document.getElementById("next-btn");
+var userAnswers = [];
 
 
 let currentQuestionIndex = 0;
@@ -113,6 +114,107 @@ function startQuiz(){
 
 
 function showQuestion(){
-    let currentQuestion = questions[currentQuestionIndex];
-    
+
+   resetState();
+   let currentQuestion = questions[currentQuestionIndex];
+   let questionNo = currentQuestionIndex +1;
+   questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+
+   currentQuestion.answers.forEach(answer => {
+    const button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("btn");
+    answerButton.appendChild(button);
+    if(answer.correct){
+        button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", selectAnswer);
+   })
 }
+
+
+function resetState(){
+    nextButton.style.display = "none";
+
+    while(answerButton.firstChild){
+        answerButton.removeChild(answerButton.firstChild)
+    }
+}
+
+
+function selectAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectedBtn.classList.add("correct");
+        score++;
+    }else{
+        selectedBtn.classList.add("incorrect");
+    }
+    Array.from(answerButton.children).forEach(button => {
+        if(button.dataset.correct === "true"){
+           // button.classList.add("correct");
+        }
+        button.disabled = true;
+        
+    });
+    nextButton.style.display = "block";
+}
+
+function themeColor() {
+    const boxx = document.getElementsByClassName("box")[0];
+    const header = document.getElementById("he");
+    if (score >= 5) {
+        boxx.style.border = "2px solid green";
+    } else {
+        boxx.style.border = "2px solid red";
+       
+    }
+}
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `You scored ${score}0% out of ${questions.length}0%`;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
+    themeColor();  
+ 
+}
+
+function themeColor() {
+    const boxx = document.getElementsByClassName("box");
+    if (score >= 5) {
+        for (let i = 0; i < boxx.length; i++) {
+            boxx[i].style.border = "5px solid green";
+            
+
+        }
+    } else {
+        for (let i = 0; i < boxx.length; i++) {
+            boxx[i].style.border = "5px solid red";
+        }
+    }
+}
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+
+}  
+
+
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else{
+        startQuiz(); 
+    }
+});
+
+
+startQuiz();
