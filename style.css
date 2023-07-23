@@ -2,21 +2,27 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
 :root{
     --maincolor : #1d3670;
     --logoright : #6363db;
     --logoleft :  #040b4e;
-    --text : #6363db;
+    --text : #0002A1;
+    --body : #56d8e4;
+    --nav: #1d3670;
+    
 }
 .darktheme{
     --maincolor : #000;
     --logoright : #515160;
     --logoleft :  #3c3232;
-    --text : #000
+    --text : #000;
+    --body : #526D82;
+    --nav: #394867;
 }
 .nanv{
-    background-color: var(--maincolor);
+    background-color: var(--nav);
 }
 a{
     color: black !important;
@@ -95,11 +101,10 @@ button{
 .main{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(115deg, #56d8e4 10%, var(--maincolor) 90%);
+    background: linear-gradient(115deg, var(--body) 10%, var(--maincolor) 90%);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     filter: blur(7px);
-    
 }
 .text{
     backdrop-filter: blur(15px);
