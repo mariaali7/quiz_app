@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Page</title>
+  
+<body>
+    <h1>Quiz</h1>
+    <p>Answer the following questions:</p>
+  
+    <form id="quizForm">
+      <p>1. What is the capital of France?</p>
+      <label>
+        <input type="radio" name="q1" value="Paris"> Paris
+      </label><br>
+      <label>
+        <input type="radio" name="q1" value="Berlin"> Berlin
+      </label><br>
+      <label>
+        <input type="radio" name="q1" value="London"> London
+      </label><br>
+  
+      <p>2. Which planet is closest to the sun?</p>
+      <label>
+        <input type="radio" name="q2" value="Venus"> Venus
+      </label><br>
+      <label>
+        <input type="radio" name="q2" value="Mercury"> Mercury
+      </label><br>
+      <label>
+        <input type="radio" name="q2" value="Mars"> Mars
+      </label><br>
+  
+      <p>3. What is 2 + 2?</p>
+      <label>
+        <input type="radio" name="q3" value="3"> 3
+      </label><br>
+      <label>
+        <input type="radio" name="q3" value="4"> 4
+      </label><br>
+      <label>
+        <input type="radio" name="q3" value="5"> 5
+      </label><br>
+  
+      <br>
+      <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+  
+    <h2>Results</h2>
+    <table id="resultsTable">
+      <tr>
+        <th>Question</th>
+        <th>Your Answer</th>
+        <th>Correct Answer</th>
+      </tr>
+    </table>
+  
