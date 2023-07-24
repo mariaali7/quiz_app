@@ -22,6 +22,7 @@ body {
   box-shadow: 3px 3px 2px #174666 , -3px -3px 2px #174666;
   
 }
+
 .container .title {
   font-size: 3vh;
   font-weight: bold;
@@ -37,6 +38,7 @@ body {
   border-radius: 5px;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
+
 .content form .user-details {
   display: flex;
   flex-wrap: wrap;
