@@ -122,7 +122,7 @@ if (Data.quiztype == "Js") {
       correct: "toLowerCase",
     },
   ];
-} else if (Data.quiztype == "css") {
+} else if (Data.quiztype == "Css") {
   quizArray = [
     {
       id: "0",

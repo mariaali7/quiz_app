@@ -200,9 +200,12 @@ button:hover {
   border-radius: 3px;
   backdrop-filter: blur(200px);
   background-color: #0000002b;
-  padding: 1rem 0;
+  
 }
-
+#name , #exame{
+  font-size: 30px;
+  color: #212dd6;
+}
 @media (min-width: 200px) and (max-width: 768px) {
   .navo li {
     text-align: center;
