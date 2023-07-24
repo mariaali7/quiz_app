@@ -40,6 +40,7 @@ function validation(event) {
   let confirmPassword = document.querySelector("#Confirm-Password").value;
   let quiztype = document.getElementById("quiztype").value;
   
+  
 
   let userData = {
     FirstName: firstName,
@@ -85,7 +86,6 @@ function validation(event) {
 function LocalStore(UserName, Email, Password) {
   RestoreData();
   userinfo.push(UserName);
-  // userinfo.push(FirstName);
   userinfo.push(Email);
   userinfo.push(Password);
   let userinfoList = JSON.stringify(userinfo);
