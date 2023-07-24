@@ -80,6 +80,7 @@ function validation() {
 function LocalStore(UserName, Email, Password) {
   RestoreData();
   userinfo.push(UserName);
+  // userinfo.push(FirstName);
   userinfo.push(Email);
   userinfo.push(Password);
   let userinfoList = JSON.stringify(userinfo);
