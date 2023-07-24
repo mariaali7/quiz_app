@@ -128,10 +128,9 @@ option{
   }
   input{
     width: 40vw !important;
-    
+    font-size: 10px !important;
   }
   .container {
-    /* text-align: center; */
     height: 90vh;
     width: 50%;
     background: none;

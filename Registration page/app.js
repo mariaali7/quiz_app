@@ -1,15 +1,3 @@
-// let userData = {
-//   FirstName: firstName,
-//   SecondName: secondName,
-//   Username: username,
-//   Email: email,
-//   PhoneNumber: phoneNumber,
-//   ConfirmoEmail: confirmoEmail,
-//   Password: password,
-//   ConfirmPassword: confirmPassword,
-// };
-
-// 0.setItem("userData", JSON.stringify("UsersData"));
 
 let userinfo = [];
 
@@ -19,15 +7,6 @@ function RestoreData() {
     userinfo = StoredData;
   }
 }
-// let sub = document.getElementById("submit")
-// sub.addEventListener("click", function transpert (event) {
-//   event.preventDefault();
-//   console.log('test');
-//   window.location.href = "../Login Page/index.html"
-// } 
-
-
-
 function validation(event) {
   let registerForm = document.getElementById("registerForm").value;
   let firstName = document.querySelector("#first-Name").value;
@@ -53,7 +32,7 @@ function validation(event) {
     ConfirmPassword: confirmPassword,
     quiztype: quiztype,
   };
-
+  
   let pwd_expression =
     /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
   let letters = /[A-Za-z]+$/;
@@ -91,7 +70,3 @@ function LocalStore(UserName, Email, Password) {
   let userinfoList = JSON.stringify(userinfo);
   localStorage.setItem("UsersData", userinfoList);
 }
-
-///////////////////////////////exam selector///////////////////////////
-//////////////////////////////////////////////////////////////////////
-
