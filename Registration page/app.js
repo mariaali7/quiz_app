@@ -36,6 +36,7 @@ function validation() {
   let confirmoEmail = document.querySelector("#confirm-your-email").value;
   let password = document.querySelector("#Password").value;
   let confirmPassword = document.querySelector("#Confirm-Password").value;
+  let quiztype = document.getElementById("quiztype").value;
 
   let userData = {
     FirstName: firstName,
@@ -46,6 +47,7 @@ function validation() {
     ConfirmoEmail: confirmoEmail,
     Password: password,
     ConfirmPassword: confirmPassword,
+    quiztype: quiztype,
   };
 
   let pwd_expression =
@@ -68,7 +70,7 @@ function validation() {
     alert("Password must be 8 charechter minimum and maximum 32");
   else if (confirmPassword != password)
     alert("The two passwords doesn't match");
-  else if (select == 0) alert("Please Select quiz Type");
+  else if (quiztype == 0) alert("Please Select quiz Type");
   else {
     transpert();
   }
@@ -86,3 +88,19 @@ function LocalStore(UserName, Email, Password) {
 
 ///////////////////////////////exam selector///////////////////////////
 //////////////////////////////////////////////////////////////////////
+function selectExam() {
+  let quiztype = document.getElementById("quiztype");
+
+  let btn = document.getElementById("submit");
+
+  if (selector.value == "Html") {
+    localStorage.setItem(`exam`, `HTML`);
+    btn.style.display = "block";
+  } else if (quiztype.value == "Css") {
+    localStorage.setItem(`exam`, `CSS`);
+    btn.style.display = "block";
+  } else if (quiztype.value == "Js") {
+    localStorage.setItem(`exam`, `JS`);
+    btn.style.display = "block";
+  }
+}
