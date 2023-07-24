@@ -139,7 +139,7 @@ option{
 .login-link a:hover {
   text-decoration: underline;
 }
-#select-qiz {
+#quiztype {
   width: 43vmin;
   height: 3vmax;
   transform: translateX(50%);
