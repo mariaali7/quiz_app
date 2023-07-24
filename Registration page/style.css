@@ -170,9 +170,9 @@ option{
   
     font-size: 6px;
   }
-  .select-qiz{
+  #quiztype{
     margin-top: 10px !important;
-    transform: translateX(0%) !important;
+    transform: translateX(0%) !important ;
     font-size: 10px ;
     
   }

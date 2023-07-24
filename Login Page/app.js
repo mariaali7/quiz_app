@@ -9,7 +9,7 @@ buttonlogin.addEventListener("click", function (event) {
     if (email === Data.Email && password === Data.Password) {
       console.log("ok");
  
-      window.location.href = "../qiz/index.html";
+      window.location.href = "../hussein/home_page.html";
       return true;
     } else {
       alert("Invalid email or password.");
