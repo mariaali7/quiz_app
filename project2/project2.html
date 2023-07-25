@@ -1,0 +1,223 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr.correct {
+      background-color: #c8e6c9;
+    }
+
+    tr.incorrect {
+      background-color: #ffcdd2;
+    }
+    #quizForm {
+      background-color: aquamarine;
+    }
+    button {
+      background-color: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz-html</h1>
+  <p>Answer the following questions:</p>
+
+  <form id="quizForm">
+    <p>1.  Define an image map?</p>
+    <label>
+      <input type="radio" name="q1" value="is used to describe the vector or raster graphics"> is used to describe the vector or raster graphics
+    </label><br>
+    <label>
+      <input type="radio" name="q1" value="is a coding style."> is a coding style.
+    </label><br>
+    <label>
+      <input type="radio" name="q1" value="helps in linking with the different kinds of web pages using a single image"> helps in linking with the different kinds of web pages using a single image
+
+    <p>2. What are void elements in HTML?</p>
+    <label>
+      <input type="radio" name="q2" value="We use the anchor tag a"> We use the anchor tag a
+    </label><br>
+    <label>
+      <input type="radio" name="q2" value="is a coding style"> is a coding style
+    </label><br>
+    <label>
+      <input type="radio" name="q2" value="is a set of tags that define a specific part of a web page."> is a set of tags that define a specific part of a web page.
+    </label><br>
+
+    <p>3.How do you create a hyperlink in HTML?</p>
+    <label>
+      <input type="radio" name="q3" value="is used to describe the vector or raster graphics"> is used to describe the vector or raster graphics
+    </label><br>
+    <label>
+      <input type="radio" name="q3" value="is a set of input fields and other elements to collect user data."> is a set of input fields and other elements to collect user data.
+    </label><br>
+    <label>
+      <input type="radio" name="q3" value=" is a set of tags that define a specific part of a web page.">  is a set of tags that define a specific part of a web page.
+    </label><br>
+    <p>4.What is the difference between HTML and CSS?</p>
+    <label>
+      <input type="radio" name="q4" value="is a coding style."> is a coding style.
+    </label><br>
+    <label>
+      <input type="radio" name="q4" value="HTML is used to create the structure and content of a web page,while CSS is used to define the appearance and layout of the page"> HTML is used to create the structure and content of a web page,while CSS is used to define the appearance and layout of the page
+
+    </label><br>
+    <label>
+      <input type="radio" name="q4" value="is used to describe the vector or raster graphics"> is used to describe the vector or raster graphics
+    </label><br>
+    <p>5. What is an element in HTML?</p>
+    <label>
+      <input type="radio" name="q5" value="is a set of tags that define a specific part of a web page."> is a set of tags that define a specific part of a web page.
+    </label><br>
+    <label>
+      <input type="radio" name="q5" value="We use the anchor tag a"> We use the anchor tag a
+    </label><br>
+    <label>
+      <input type="radio" name="q5" value="is used to describe the vector or raster graphics"> is used to describe the vector or raster graphics
+    </label><br>
+    <p>6.How do you align list elements in an HTML file?</p>
+    <label>
+      <input type="radio" name="q6" value="is used to describe the vector or raster graphics"> is used to describe the vector or raster graphics
+    </label><br>
+    <label>
+      <input type="radio" name="q6" value="is a coding style."> is a coding style.
+    </label><br>
+    <label>
+      <input type="radio" name="q6" value="in an HTML file by using indents"> in an HTML file by using indents
+    </label><br>
+    <p>7. What are HTML Attributes?</p>
+    <label>
+      <input type="radio" name="q7" value="We use the anchor tag a"> We use the anchor tag 
+    </label><br>
+    <label>
+      <input type="radio" name="q7" value="are the properties that can be added to an HTML tag.">are the properties that can be added to an HTML tag.
+    </label><br>
+    <label>
+      <input type="radio" name="q7" value="in an HTML file by using indents">in an HTML file by using indents
+    </label><br>
+    <p>8. What are HTML tags?</p>
+    <label>
+      <input type="radio" name="q8" value="in an HTML file by using indents">in an HTML file by using indents
+    </label><br>
+    <label>
+      <input type="radio" name="q8" value="is a coding style"> is a coding style
+    </label><br>
+    <label>
+      <input type="radio" name="q8" value="for placing the elements in the proper and appropriate format."> for placing the elements in the proper and appropriate format.
+    </label><br>
+    <p>9. What is HTML?</p>
+    <label>
+      <input type="radio" name="q9" value="HyperText Markup Language">HyperText Markup Language
+    </label><br>
+    <label>
+      <input type="radio" name="q9" value="HyperTest Markup Language"> HyperTest Markup Language
+    </label><br>
+    <label>
+      <input type="radio" name="q9" value="HyperText Mockup Language"> HyperText Mockup Language
+
+    <br>
+    <button type="button" onclick="checkAnswers()">Submit</button>
+  </form>
+
+  <h2>Results</h2>
+  <table id="resultsTable">
+    <tr>
+      <th>Question</th>
+      <th>Your Answer</th>
+      <th>Correct Answer</th>
+    </tr>
+  </table>
+
+  <script>
+    function checkAnswers() {
+      const quizForm = document.getElementById('quizForm');
+      const resultsTable = document.getElementById('resultsTable');
+
+      // Clear previous results
+      resultsTable.innerHTML = `
+        <tr>
+          <th>Question</th>
+          <th>Your Answer</th>
+          <th>Correct Answer</th>
+        </tr>
+      `;
+
+      const correctAnswers = {
+        q1: 'helps in linking with the different kinds of web pages using a single image',
+        q2: 'We use the anchor tag <a>',
+        q3: 'is a set of input fields and other elements to collect user data.',
+        q4: 'HTML is used to create the structure and content of a web page,while CSS is used to define the appearance and layout of the page',
+        q5:'is a set of tags that define a specific part of a web page.',
+         q6:'in an HTML file by using indents',
+         q7:"are the properties that can be added to an HTML tag.",
+         q8:'for placing the elements in the proper and appropriate format.',
+          q9:'HyperText Markup Language'
+      };
+        
+      let correctCount = 0;
+
+      for (const question in correctAnswers) {
+        const selectedOption = quizForm.elements[question].value;
+        const correctAnswer = correctAnswers[question];
+        const isCorrect = selectedOption === correctAnswer;
+
+        const row = resultsTable.insertRow();
+        row.insertCell().textContent = question;
+        row.insertCell().textContent = selectedOption;
+        row.insertCell().textContent = correctAnswer;
+
+        if (isCorrect) {
+          row.classList.add('correct');
+          correctCount++;
+        } else {
+          row.classList.add('incorrect');
+        }
+      }
+
+      const resultRow = resultsTable.insertRow();
+      resultRow.insertCell().textContent = 'Total Correct';
+      resultRow.insertCell().textContent = correctCount;
+      resultRow.insertCell(); // Empty cell for formatting
+
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+  </script>
+</body>
+</html> 
+
+

@@ -1,0 +1,74 @@
+[
+    {
+        "title":"What is HTML",
+        "answer_1":"HyperText Marketup Language",
+        "answer_2":"HyperText Mockup Language",
+        "answer_3":"HyperTest Markup Language",
+        "answer_4":"HyperText Markup Language",
+        "right_answer":"HyperText Markup Language"
+    },
+    {
+        "title":" What are HTML tags",
+        "answer_1":"for placing the elements in the proper and appropriate format.",
+        "answer_2":"in an HTML file by using indents",
+        "answer_3":"are the properties that can be added to an HTML tag.",
+        "answer_4":"is a coding style.",
+        "right_answer":"for placing the elements in the proper and appropriate format."
+    },
+    {
+        "title":"What are HTML Attributes",
+        "answer_1":"is a coding style.",
+        "answer_2":"We use the anchor tag <a> ",
+        "answer_3":" are the properties that can be added to an HTML tag.",
+        "answer_4":"in an HTML file by using indents",
+        "right_answer":" are the properties that can be added to an HTML tag."
+    },
+    {
+        "title":" How do you align list elements in an HTML file",
+        "answer_1":"is a coding style.",
+        "answer_2":"is used to describe the vector or raster graphics",
+        "answer_3":"HyperText Markup Language",
+        "answer_4":"in an HTML file by using indents",
+        "right_answer":"in an HTML file by using indents"
+    },
+    {
+        "title":"What is an element in HTML",
+        "answer_1":" is a set of tags that define a specific part of a web page.",
+        "answer_2":"is a coding style.",
+        "answer_3":"We use the anchor tag <a> ",
+        "answer_4":"is used to describe the vector or raster graphics",
+        "right_answer":" is a set of tags that define a specific part of a web page."
+    },
+    {
+        "title":" What is the difference between HTML and CSS",
+        "answer_1":"is used to describe the vector or raster graphics",
+        "answer_2":"HTML is used to create the structure and content of a web page,while CSS is used to define the appearance and layout of the page",
+        "answer_3":"is a coding style.",
+        "answer_4":"HyperText Markup Language",
+        "right_answer":"HTML is used to create the structure and content of a web page,while CSS is used to define the appearance and layout of the page"
+    },
+    {
+        "title":" What are void elements in HTML",
+        "answer_1":"We use the anchor tag <a> ",
+        "answer_2":"is a coding style.",
+        "answer_3":"is used to describe the vector or raster graphics",
+        "answer_4":" is a set of tags that define a specific part of a web page.",
+        "right_answer":"We use the anchor tag <a> "
+    },
+    {
+        "title":"How do you create a hyperlink in HTML",
+        "answer_1":"is used to describe the vector or raster graphics",
+        "answer_2":"HyperText Markup Language",
+        "answer_3":"is a set of input fields and other elements to collect user data.",
+        "answer_4":" is a set of tags that define a specific part of a web page.",
+        "right_answer":"is a set of input fields and other elements to collect user data."
+    },
+    {
+        "title":" Define an image map",
+        "answer_1":"is used to describe the vector or raster graphics",
+        "answer_2":"is a coding style.",
+        "answer_3":"helps in linking with the different kinds of web pages using a single image",
+        "answer_4":" is a set of tags that define a specific part of a web page.",
+        "right_answer":"helps in linking with the different kinds of web pages using a single image."
+    }
+]
