@@ -1,15 +1,3 @@
-// let userData = {
-//   FirstName: firstName,
-//   SecondName: secondName,
-//   Username: username,
-//   Email: email,
-//   PhoneNumber: phoneNumber,
-//   ConfirmoEmail: confirmoEmail,
-//   Password: password,
-//   ConfirmPassword: confirmPassword,
-// };
-
-// 0.setItem("userData", JSON.stringify("UsersData"));
 
 let userinfo = [];
 
@@ -19,14 +7,7 @@ function RestoreData() {
     userinfo = StoredData;
   }
 }
-
-function transpert() {
-  // document.getElementById('submit').style.display="none";
-  // document.getElementById("subdiv").style.display="block";
-  window.location = "../Login Page/index.html";
-}
-
-function validation() {
+function validation(event) {
   let registerForm = document.getElementById("registerForm").value;
   let firstName = document.querySelector("#first-Name").value;
   let secondName = document.querySelector("#second-Name").value;
@@ -37,6 +18,8 @@ function validation() {
   let password = document.querySelector("#Password").value;
   let confirmPassword = document.querySelector("#Confirm-Password").value;
   let quiztype = document.getElementById("quiztype").value;
+  
+  
 
   let userData = {
     FirstName: firstName,
@@ -49,7 +32,7 @@ function validation() {
     ConfirmPassword: confirmPassword,
     quiztype: quiztype,
   };
-
+  
   let pwd_expression =
     /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
   let letters = /[A-Za-z]+$/;
@@ -72,7 +55,9 @@ function validation() {
     alert("The two passwords doesn't match");
   else if (quiztype == 0) alert("Please Select quiz Type");
   else {
-    transpert();
+
+    event.preventDefault();
+      window.location.href = "../Login Page/index.html"
   }
   localStorage.setItem("userData", JSON.stringify(userData));
 }
@@ -80,28 +65,8 @@ function validation() {
 function LocalStore(UserName, Email, Password) {
   RestoreData();
   userinfo.push(UserName);
-  // userinfo.push(FirstName);
   userinfo.push(Email);
   userinfo.push(Password);
   let userinfoList = JSON.stringify(userinfo);
   localStorage.setItem("UsersData", userinfoList);
-}
-
-///////////////////////////////exam selector///////////////////////////
-//////////////////////////////////////////////////////////////////////
-function selectExam() {
-  let quiztype = document.getElementById("quiztype");
-
-  let btn = document.getElementById("submit");
-
-  if (selector.value == "Html") {
-    localStorage.setItem(`exam`, `HTML`);
-    btn.style.display = "block";
-  } else if (quiztype.value == "Css") {
-    localStorage.setItem(`exam`, `CSS`);
-    btn.style.display = "block";
-  } else if (quiztype.value == "Js") {
-    localStorage.setItem(`exam`, `JS`);
-    btn.style.display = "block";
-  }
 }

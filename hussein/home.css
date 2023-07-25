@@ -100,9 +100,7 @@ button {
   background-color: #367a97;
   
 }
-.greet::backdrop {
-  backdrop-filter: blur(1rem);
-}
+
 .greet:hover {
   background-color: #3795bd22;
 }
@@ -119,10 +117,10 @@ button a {
   text-decoration: none;
 }
 button:hover {
-  background-color: #3795bd !important;
+  background-image: linear-gradient(90deg, rgba(2,39,46,1) 0%, rgba(12,6,115,1) 18%, rgba(4,4,62,1) 97%) !important; 
 }
 .greet::after {
-  content: "💻";
+  content: "HELLO";
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -148,7 +146,7 @@ button:hover {
   line-height: 40px;
 }
 .greet:hover::after {
-  left: 60%;
+  left: 65%;
   top: -60%;
   width: 500px;
   height: 500px;
@@ -157,9 +155,12 @@ button:hover {
   color: #3795bd;
   font-size: 40px;
   line-height: 100px;
+  outline-width: 4px;
+  outline-style: solid;
+  outline-color: #02062c;
 }
 .greet:hover::before {
-  left: -40%;
+  left: -45%;
   top: -60%;
   width: 500px;
   height: 500px;
@@ -168,6 +169,9 @@ button:hover {
   color: #3795bd;
   font-size: 40px;
   line-height: 100px;
+  outline-width: 4px;
+  outline-style: solid;
+  outline-color: #02062c;
 }
 
 .circle2 {
@@ -196,13 +200,15 @@ button:hover {
   background-color: #1d3670;
 }
 .greet div {
-  /* border: 1px solid black; */
   border-radius: 3px;
-  backdrop-filter: blur(200px);
+  backdrop-filter: blur(20px);
   background-color: #0000002b;
-  padding: 1rem 0;
+  
 }
-
+#name , #exame{
+  font-size: 30px;
+  color: #212dd6;
+}
 @media (min-width: 200px) and (max-width: 768px) {
   .navo li {
     text-align: center;
