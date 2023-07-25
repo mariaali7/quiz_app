@@ -329,11 +329,11 @@ if (Data.quiztype == "Js") {
 }
 
 //Restart Quiz
-restart.addEventListener("click", () => {
-  initial();
-  displayContainer.classList.remove("hide");
-  scoreContainer.classList.add("hide");
-});
+// restart.addEventListener("click", () => {
+//   initial();
+//   displayContainer.classList.remove("hide");
+//   scoreContainer.classList.add("hide");
+// });
 
 //Next Button
 nextBtn.addEventListener(
@@ -363,6 +363,7 @@ nextBtn.addEventListener(
       clearInterval(countdown);
       timerDisplay();
       localStorage.setItem("quizArray", JSON.stringify(quizArray));
+      localStorage.setItem("scoreCount" , JSON.stringify(scoreCount));
     }
   })
 );

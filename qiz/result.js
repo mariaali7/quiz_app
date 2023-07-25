@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const userAnswer = localStorage.getItem(`userAnswer${i}`);
         userAnswers[i] = userAnswer;
     }
+    
+    
+    
 
     // Display the questions and user answers
     const resultContainer = document.querySelector(".result-container");
@@ -20,4 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         resultContainer.appendChild(questionElement);
     });
+    var a = document.createElement('a');
+    a.setAttribute('href',desiredLink);
+    a.innerHTML = desiredText;
+    // apend the anchor to the body
+    // of course you can append it almost to any other dom element
+    document.getElementsByTagName('body')[0].appendChild(a);
 });
+
+let score = JSON.parse(localStorage.getItem("scoreCount"));
+if(score >= 5 ){
+    document.body.classList.add("paas")
+}
+else{
+    document.body.classList.add("faild")
+}

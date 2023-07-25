@@ -5,17 +5,18 @@
 }
 :root{
     --maincolor : linear-gradient(90deg, rgba(9,2,46,1) 0%, rgba(6,19,115,1) 18%, rgba(4,16,62,1) 97%);;
-    
+    --text : ;
 } 
 .paas{
     --maincolor : linear-gradient(90deg, rgba(3,46,2,1) 0%, rgba(6,115,33,1) 18%, rgba(4,62,35,1) 97%);
+    --text : rgb(4, 98, 4);
 }
 .faild{
     --maincolor : linear-gradient(90deg, rgba(46,2,9,1) 0%, rgba(115,6,17,1) 18%, rgba(62,11,4,1) 97%);
+    --text : rgb(135, 7, 7);
 }
 body{
-    display: flex;
-    align-items: center;
+    
     background: var(--maincolor);
     
 }
@@ -24,14 +25,16 @@ body{
     background-color: #cccccc;
     margin: 0 auto;
     padding: 1%;
-    backdrop-filter: blur(10px);
 }
 .result-container div{
     margin-bottom: 1%;
 }
 h1{
-    color: var(--maincolor);
+    color: var(--text);
     margin-bottom: 2%;
+}
+h3{
+    color: var(--maincolor);
 }
 h3 , p{
     margin-bottom: 2%;
@@ -44,4 +47,21 @@ hr{
     background-color: black;
     border: none;
     border-radius: 5px;
+}
+.logout{
+    margin: 2% auto;
+    text-align: center;
+}
+.logout a{
+    text-decoration: none;
+    color: black;
+    background-color: #cccccc;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 black;
+}
+@media (min-width: 280px) and (max-width: 1000px){
+    h1,h3,p{
+        font-size: 15px ;
+    }
 }
