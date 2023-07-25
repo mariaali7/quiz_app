@@ -21,3 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
         resultContainer.appendChild(questionElement);
     });
 });
+
+let score = JSON.parse(localStorage.getItem("scoreCount"));
+if(score >= 5 ){
+    document.body.classList.add("paas")
+}
+else{
+    document.body.classList.add("faild")
+}
