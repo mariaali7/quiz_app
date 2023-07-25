@@ -141,3 +141,6 @@ form .signup-link a:hover {
     font-size: 12px;
   }
 }
+.hide {
+  display: none;
+}
