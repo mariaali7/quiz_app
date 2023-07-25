@@ -1,3 +1,8 @@
+passwordtex = document.querySelector('#passwordtex')
+emailtex = document.querySelector('#emailtex')
+
+
+
 let buttonlogin = document.getElementById("longin");
 
 buttonlogin.addEventListener("click", function (event) {
@@ -8,15 +13,15 @@ buttonlogin.addEventListener("click", function (event) {
   if (Data) {
     if (email === Data.Email && password === Data.Password) {
       console.log("ok");
- 
+
       window.location.href = "../hussein/home_page.html";
       return true;
     } else {
-      alert("Invalid email or password.");
+      emailtex.classList.remove("hide")
       return false;
     }
   } else {
-    alert("No user data found. Please register first.");
+    passwordtex.classList.remove("hide");
     return false;
   }
 });

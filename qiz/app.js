@@ -475,6 +475,3 @@ window.onload = () => {
   startScreen.classList.remove("hide");
   displayContainer.classList.add("hide");
 };
-
-
-
