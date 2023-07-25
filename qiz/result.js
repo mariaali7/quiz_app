@@ -5,7 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < quizArray.length; i++) {
         const userAnswer = localStorage.getItem(`userAnswer${i}`);
         userAnswers[i] = userAnswer;
+        
     }
+    
+    
+    
 
     // Display the questions and user answers
     const resultContainer = document.querySelector(".result-container");
