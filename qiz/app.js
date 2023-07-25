@@ -143,8 +143,8 @@ if (Data.quiztype == "Js") {
     },
     {
       id: "2",
-      question:
-        "Which of the following CSS selectors are used to specify a group of elements?",
+      question:"Which of the following CSS selectors are used to specify a group of elements?",
+        
       options: ["tag", "id", "class", "++both class and tag"],
       correct: "class",
     },
@@ -348,16 +348,21 @@ nextBtn.addEventListener(
       scoreContainer.classList.remove("hide");
       //user score
       userScore.innerHTML =
-        "Your score is " + scoreCount + " out of " + questionCount;
+        "Your score is " + scoreCount *10 + "% out of " + questionCount *10 +"%";
+        console.log(quizArray[0]);
     } else {
       //display questionCount
       countOfQuestion.innerHTML =
         questionCount + 1 + " of " + quizArray.length + " Question";
+        scoreCount >= 5
+        ? (userScore.style.color = "green")
+        : (userScore.style.color = "red");
       //display quiz
       quizDisplay(questionCount);
       count = 11;
       clearInterval(countdown);
       timerDisplay();
+      localStorage.setItem("quizArray", JSON.stringify(quizArray));
     }
   })
 );
@@ -437,10 +442,12 @@ function checker(userOption) {
 
   //clear interval(stop timer)
   clearInterval(countdown);
+  localStorage.setItem(`userAnswer${questionCount}`, userSolution);
   //disable all options
   options.forEach((element) => {
     element.disabled = true;
   });
+  
 }
 
 //initial setup
@@ -467,3 +474,6 @@ window.onload = () => {
   startScreen.classList.remove("hide");
   displayContainer.classList.add("hide");
 };
+
+
+
