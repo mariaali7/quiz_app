@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < quizArray.length; i++) {
         const userAnswer = localStorage.getItem(`userAnswer${i}`);
         userAnswers[i] = userAnswer;
-        
     }
     
     
@@ -24,6 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         resultContainer.appendChild(questionElement);
     });
+    var a = document.createElement('a');
+    a.setAttribute('href',desiredLink);
+    a.innerHTML = desiredText;
+    // apend the anchor to the body
+    // of course you can append it almost to any other dom element
+    document.getElementsByTagName('body')[0].appendChild(a);
 });
 
 let score = JSON.parse(localStorage.getItem("scoreCount"));
