@@ -173,7 +173,9 @@ function resetState(){
         }else{
                     startQuiz();
                 }
-            });
+             } );
+       
+           
             
 startQuiz();
 
