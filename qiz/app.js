@@ -371,7 +371,7 @@ const timerDisplay = () => {
       clearInterval(countdown);
       displayNext();
     }
-  }, 1000);
+  }, 1000);ق
 };
 
 //Display quiz
