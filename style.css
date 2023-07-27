@@ -1,43 +1,41 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     
-}
-:root{
-    --maincolor : #1d3670;
-    --logoright : #FD8D14;
-    --logoleft :  #C51605;
-    --text : #CECE5A;
-    --body : #56d8e4;
-    --nav: #0a0a09;
-    --logoafter: #624d02;
-    --logobefore : #948913;
-    --logo : #332801 ;
-}
-.darktheme{
-    --maincolor : #000;
-    --logoright : #515160;
-    --logoleft :  #3c3232;
-    --text : #000;
-    --body : #526D82;
+  }
+  :root {
+    --maincolor: #1d3670;
+    --logoright: #dddddd;
+    --logoleft: #c51605;
+    --text: #cece5a;
+    --body: #dddddd;
+    --nav: #222831;
+    --logoafter: #f05454;
+    --logobefore: #eeeeee;
+    --logo: #393e46;
+  }
+  .darktheme {
+    --maincolor: #000;
+    --logoright: #515160;
+    --logoleft: #3c3232;
+    --text: #000;
+    --body: #526d82;
     --nav: #394867;
     --logoafter: #332801;
-    --logobefore : #EEEEEE;
-    --logo : #ccc;
-}
-.nanv{
+    --logobefore: #eeeeee;
+    --logo: #ccc;
+  }
+  .nanv {
     background-color: var(--nav);
-}
-a{
+  }
+  a {
     color: black !important;
-    
-}
-button{
+  }
+  button {
     background-color: black !important;
-    
-}
-.logo{
+  }
+  .logo {
     margin: auto 0;
     display: flex;
     width: 10vh;
@@ -51,62 +49,61 @@ button{
     color: var(--body);
     font-size: 2vh;
     transition: 1s;
-}
-.logo::after{
+  }
+  .logo::after {
     content: "";
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    border-color: var(--logoright) var(--logoright) var(--logoleft) var(--logoleft);
+    border-color: var(--logoright) var(--logoright) var(--logoleft)
+      var(--logoleft);
     border-style: solid;
     border-width: 5px;
     border-radius: 50%;
     transition-duration: 2s;
-
-}
-.logo:hover::after{
+  }
+  .logo:hover::after {
     transform: rotate(1turn);
-    border-color: var(--logobefore) var(--logobefore) var(--logoafter) var(--logoafter);
-}
-.logo:hover{
-    color: #3795BD;
+    border-color: var(--logobefore) var(--logobefore) var(--logoafter)
+      var(--logoafter);
+  }
+  .logo:hover {
     background-color: var(--logo);
-}
-.navo li{
+  }
+  .navo li {
     margin-right: 10px;
-}
-.sign-in,
-.sign-up {
-    
+  }
+  .sign-in,
+  .sign-up {
     background-color: var(--logoright);
     border-radius: 2px;
-}
-.sign-in:hover{
+  }
+  .sign-in:hover {
     background-color: #565d9b;
-}
-.sign-up:hover{
+  }
+  .sign-up:hover {
     background-color: #565d9b;
     color: white !important;
-}
-.sign-in:hover a{
+  }
+  .sign-in:hover a {
     color: antiquewhite !important;
-}
-.sign-up:hover a{
+  }
+  .sign-up:hover a {
     color: white !important;
-}
-#home{
+  }
+  #home {
     background-color: var(--logoright);
-}
-#home:hover a {
+  }
+  #home:hover a {
     color: white !important;
     background-color: #565d9b;
-}
+  }
 .main{
     width: 100%;
     height: 100vh;
-    background: url(booklight.jpg);
+    background: url(hussein/HD_Video_Background_VBHD0005_Background_Dvd_Background_Dvd_Download_Background_For_Chroma_Key.gif);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     /* filter: blur(7px); */

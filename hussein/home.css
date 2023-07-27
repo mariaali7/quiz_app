@@ -101,19 +101,13 @@ button {
   background-color: #565d9b;
 }
 .boxing {
+  background-image: url(HD_Video_Background_VBHD0005_Background_Dvd_Background_Dvd_Download_Background_For_Chroma_Key.gif);
   width: 100%;
   height: 100vh;
-  /* background: url(canva-black-sky-galaxy-stars-desktop-wallpaper-wANsEZn_eiI.jpg) ; */
-  background-size: 100% 100%;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56%;
-  position: absolute;
-  overflow-y: hidden !important;
-  /* background-color: #967E76; */
 }
 
 .greet {
+  
   position: absolute;
   top: 50%;
   left: 50%;

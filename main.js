@@ -16,7 +16,7 @@ dark.onclick = function () {
     }
     else{
         photo.src = "moon.png"
-        box.style.backgroundImage = "url('booklight.jpg')"
+        // box.style.backgroundImage = "url('booklight.jpg')"
     }
 }
 
