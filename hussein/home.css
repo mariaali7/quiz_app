@@ -2,17 +2,32 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
 }
-
+:root {
+  --maincolor: #1d3670;
+  --logoright: #dddddd;
+  --logoleft: #c51605;
+  --text: #cece5a;
+  --body: #dddddd;
+  --nav: #222831;
+  --logoafter: #f05454;
+  --logobefore: #eeeeee;
+  --logo: #393e46;
+}
+.darktheme {
+  --maincolor: #000;
+  --logoright: #515160;
+  --logoleft: #3c3232;
+  --text: #000;
+  --body: #526d82;
+  --nav: #394867;
+  --logoafter: #332801;
+  --logobefore: #eeeeee;
+  --logo: #ccc;
+}
 .nanv {
-  background-color: #1d3670;
-}
-#home {
-  background-color: #56d8e498;
-}
-#home:hover a {
-  color: white !important;
-  background-color: #565d9b;
+  background-color: var(--nav);
 }
 a {
   color: black !important;
@@ -26,12 +41,12 @@ button {
   width: 10vh;
   height: 10vh;
   border-radius: 50%;
-  background-color: #d2d6fd;
+  background-color: var(--logo);
   text-align: center;
   justify-content: center;
   align-items: center;
   position: relative;
-  color: #565d9b;
+  color: var(--body);
   font-size: 2vh;
   transition: 1s;
 }
@@ -42,7 +57,8 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  border-color: #6363db #6363db #02062c #02062c;
+  border-color: var(--logoright) var(--logoright) var(--logoleft)
+    var(--logoleft);
   border-style: solid;
   border-width: 5px;
   border-radius: 50%;
@@ -50,18 +66,18 @@ button {
 }
 .logo:hover::after {
   transform: rotate(1turn);
-  border-color: #3795bd #3795bd #261e3b #261e3b;
+  border-color: var(--logobefore) var(--logobefore) var(--logoafter)
+    var(--logoafter);
 }
 .logo:hover {
-  color: #3795bd;
-  background-color: #0c134f;
+  background-color: var(--logo);
 }
 .navo li {
   margin-right: 10px;
 }
 .sign-in,
 .sign-up {
-  background-color: #56d8e498;
+  background-color: var(--logoright);
   border-radius: 2px;
 }
 .sign-in:hover {
@@ -77,12 +93,26 @@ button {
 .sign-up:hover a {
   color: white !important;
 }
+#home {
+  background-color: var(--logoright);
+}
+#home:hover a {
+  color: white !important;
+  background-color: #565d9b;
+}
 .boxing {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(115deg, #56d8e4 10%, #1d3670 90%);
-  filter: blur(10px);
+  /* background: url(canva-black-sky-galaxy-stars-desktop-wallpaper-wANsEZn_eiI.jpg) ; */
+  background-size: 100% 100%;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%;
+  position: absolute;
+  overflow-y: hidden !important;
+  /* background-color: #967E76; */
 }
+
 .greet {
   position: absolute;
   top: 50%;
@@ -96,12 +126,11 @@ button {
   transition: 1s;
   padding: 2%;
   z-index: 1;
-  background-color: #1e4150;
-  
+  background-color: #081217;
 }
 
 .greet:hover {
-  background-color: #3795bd22;
+  background-color: transparent;
 }
 
 button {
@@ -116,7 +145,12 @@ button a {
   text-decoration: none;
 }
 button:hover {
-  background-image: linear-gradient(90deg, rgba(2,39,46,1) 0%, rgba(12,6,115,1) 18%, rgba(4,4,62,1) 97%) !important; 
+  background-image: linear-gradient(
+    90deg,
+    rgba(2, 39, 46, 1) 0%,
+    rgba(12, 6, 115, 1) 18%,
+    rgba(4, 4, 62, 1) 97%
+  ) !important;
 }
 .greet::after {
   content: "WELCOME!";
@@ -199,14 +233,13 @@ button:hover {
   background-color: #1d3670;
 }
 .greet div {
-  border-radius: 3px;
-  background-color: #1d3670;
+  border-radius: 20px;
+  background-color: #222831;
   transition: 2s;
 }
-.greet div:hover{
-  background-color: #3795bd;
-}
-#name , #exame{
+
+#name,
+#exame {
   font-size: 30px;
   color: #f7f7f9;
 }
@@ -223,6 +256,11 @@ button:hover {
   }
   * {
     font-size: 2.3vh;
+  }
+  #name,
+  #exame {
+    font-size: 120%;
+    color: #f7f7f9;
   }
 }
 @media (max-width: 1090px) {

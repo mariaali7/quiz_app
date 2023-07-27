@@ -6,12 +6,14 @@
 }
 :root{
     --maincolor : #1d3670;
-    --logoright : #6363db;
-    --logoleft :  #040b4e;
-    --text : #0002A1;
+    --logoright : #FD8D14;
+    --logoleft :  #C51605;
+    --text : #CECE5A;
     --body : #56d8e4;
-    --nav: #1d3670;
-    
+    --nav: #0a0a09;
+    --logoafter: #624d02;
+    --logobefore : #948913;
+    --logo : #332801 ;
 }
 .darktheme{
     --maincolor : #000;
@@ -20,6 +22,9 @@
     --text : #000;
     --body : #526D82;
     --nav: #394867;
+    --logoafter: #332801;
+    --logobefore : #EEEEEE;
+    --logo : #ccc;
 }
 .nanv{
     background-color: var(--nav);
@@ -38,12 +43,12 @@ button{
     width: 10vh;
     height: 10vh;
     border-radius: 50%;
-    background-color: #d2d6fd;
+    background-color: var(--logo);
     text-align: center;
     justify-content: center;
     align-items: center;
     position: relative;
-    color: #565d9b;
+    color: var(--body);
     font-size: 2vh;
     transition: 1s;
 }
@@ -63,11 +68,11 @@ button{
 }
 .logo:hover::after{
     transform: rotate(1turn);
-    border-color: #3795BD #3795BD #261e3b #261e3b;
+    border-color: var(--logobefore) var(--logobefore) var(--logoafter) var(--logoafter);
 }
 .logo:hover{
     color: #3795BD;
-    background-color: #0C134F;
+    background-color: var(--logo);
 }
 .navo li{
     margin-right: 10px;
@@ -101,10 +106,10 @@ button{
 .main{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(115deg, var(--body) 10%, var(--maincolor) 90%);
+    background: url(booklight.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    filter: blur(7px);
+    /* filter: blur(7px); */
 }
 .text{
     backdrop-filter: blur(15px);
@@ -121,7 +126,7 @@ button{
     padding: 20px;
     text-align: center;
     border-radius: 5px;
-    font-size: 3vh;
+    font-size: 150%;
     transition: 1s;
 }
 .text:hover{
@@ -129,7 +134,7 @@ button{
     box-shadow: 3px 3px 1px 1px var(--maincolor) , -3px -3px 1px 1px var(--maincolor);
 }
 .text p span{
-    font-size: 3.6vh;
+    font-size: 170%;
     color: var(--text);
 }
 #darkmodebtn{
@@ -157,12 +162,13 @@ button{
         margin-top: 40px;
     }
     .text p {
-        font-size: 60%
+        font-size: 3.6vw;
     }
     p span{
-        font-size: 1.8vh !important;
+        font-size: 4vw !important;
     }
     #darkmodebtn{
         display: none;
     }
+    
 }
