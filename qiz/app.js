@@ -14,11 +14,11 @@ let scoreCount = 0;
 let count = 11;
 let countdown;
 let quizArray = [];
-let Quiztype = localStorage.quiztype;
-console.log(Quiztype);
+let Data = JSON.parse(localStorage.getItem("userData"));
+console.log(Data.quiztype);
 //Questions and Options array
 
-if (Quiztype === "Js") {
+if (Data.quiztype == "Js") {
   quizArray = [
     {
       id: "0",
@@ -122,7 +122,7 @@ if (Quiztype === "Js") {
       correct: "toLowerCase",
     },
   ];
-} else if (Quiztype === "css") {
+} else if (Data.quiztype == "Css") {
   quizArray = [
     {
       id: "0",
@@ -143,8 +143,8 @@ if (Quiztype === "Js") {
     },
     {
       id: "2",
-      question:
-        "Which of the following CSS selectors are used to specify a group of elements?",
+      question:"Which of the following CSS selectors are used to specify a group of elements?",
+        
       options: ["tag", "id", "class", "++both class and tag"],
       correct: "class",
     },
@@ -206,7 +206,7 @@ if (Quiztype === "Js") {
       correct: "-webkit",
     },
   ];
-} else if (Quiztype === "Html") {
+} else if (Data.quiztype == "Html") {
   quizArray = [
     {
       id: "0",
@@ -329,11 +329,11 @@ if (Quiztype === "Js") {
 }
 
 //Restart Quiz
-restart.addEventListener("click", () => {
-  initial();
-  displayContainer.classList.remove("hide");
-  scoreContainer.classList.add("hide");
-});
+// restart.addEventListener("click", () => {
+//   initial();
+//   displayContainer.classList.remove("hide");
+//   scoreContainer.classList.add("hide");
+// });
 
 //Next Button
 nextBtn.addEventListener(
@@ -348,16 +348,22 @@ nextBtn.addEventListener(
       scoreContainer.classList.remove("hide");
       //user score
       userScore.innerHTML =
-        "Your score is " + scoreCount + " out of " + questionCount;
+        "Your score is " + scoreCount *10 + "% out of " + questionCount *10 +"%";
+        console.log(quizArray[0]);
     } else {
       //display questionCount
       countOfQuestion.innerHTML =
         questionCount + 1 + " of " + quizArray.length + " Question";
+        scoreCount >= 5
+        ? (userScore.style.color = "green")
+        : (userScore.style.color = "red");
       //display quiz
       quizDisplay(questionCount);
       count = 11;
       clearInterval(countdown);
       timerDisplay();
+      localStorage.setItem("quizArray", JSON.stringify(quizArray));
+      localStorage.setItem("scoreCount" , JSON.stringify(scoreCount));
     }
   })
 );
@@ -437,10 +443,12 @@ function checker(userOption) {
 
   //clear interval(stop timer)
   clearInterval(countdown);
+  localStorage.setItem(`userAnswer${questionCount}`, userSolution);
   //disable all options
   options.forEach((element) => {
     element.disabled = true;
   });
+  
 }
 
 //initial setup
