@@ -11,21 +11,22 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: linear-gradient(115deg, #56d8e4 10%, #1d3670 90%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 3%, rgba(204,204,204,1) 100%);
 }
 .container {
   /* max-width: 700px; */
   width: 50%;
-  background: linear-gradient(115deg, #1d5d9b 10%, #1d367083 90%);
+  background-color: #222831;
   padding: 3% 3%;
   border-radius: 5px;
-  box-shadow: 3px 3px 2px #174666, -3px -3px 2px #174666;
+  box-shadow: 3px 3px 2px #000000, -3px -3px 2px #494546;
 }
 
 .container .title {
   font-size: 3vh;
   font-weight: bold;
   position: relative;
+  color: #ccc;
 }
 .container .title::before {
   content: "";
@@ -84,11 +85,10 @@ form .input-box span.details {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 3%, rgba(204,204,204,1) 100%);
+
 }
-.button input:hover {
-  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
-}
+
 ::placeholder {
   font-size: 65%;
 }
@@ -102,10 +102,12 @@ option {
 
 .login-link {
   text-align: center;
+  color: #ccc;
 }
 .login-link a {
   color: #3498db;
   text-decoration: none;
+  font-weight: bold;
 }
 .login-link a:hover {
   text-decoration: underline;
@@ -119,7 +121,7 @@ option {
   .user-details {
     display: flex;
     flex-flow: column;
-    font-size: 20px;
+    font-size: 10px;
     height: 100%;
     width: 100vw;
   }
@@ -137,7 +139,7 @@ option {
     overflow-x: hidden;
   }
   ::placeholder {
-    font-size: 6px;
+    color: transparent;
   }
   #quiztype {
     margin-top: 10px !important;
@@ -145,7 +147,8 @@ option {
     font-size: 10px;
   }
   body {
-    background-color: #174666 !important;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 3%, rgba(204,204,204,1) 100%) !important;
+
     background: none;
     text-align: center!;
     /* overflow-x: none; */
