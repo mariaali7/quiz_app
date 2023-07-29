@@ -3,9 +3,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <title>Responsive Registration Form | CodingLab</title>
+    <title>Quizlet-registration</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../bookdark.jpg">
   </head>
   <body>
     <div class="container">
@@ -15,15 +16,17 @@
           <div class="user-details">
             <div class="input-box" id="first-Name" >
               <span class="details">first Name</span>
-              <input type="text" placeholder="Enter your first name" required />
+              <input id="firstNameinput" type="text" placeholder="Enter your first name" required />
+              <p id="firstNametex" class="hide" style="font-weight: bold; position: sticky; font-size: 1.5vmin; color: red  ;"> First name must 'not contain numbers</p>
             </div>
             <div class="input-box" id="second-Name">
               <span class="details">second Name</span>
-              <input
+              <input id="secondNameinput"
                 type="text"
                 placeholder="Enter your second name"
                 required
               />
+              <p id="secondNametex" class="hide" style="font-weight: bold; position: sticky; font-size: 1.5vmin; color: red  ;"> Second name must 'not contain numbers</p>
             </div>
             <div class="input-box" >
               <span class="details">Username</span>
@@ -37,33 +40,37 @@
             
             <div class="input-box" >
               <span class="details">Email</span>
-              <span id="emailtex" class="hide" style="position: fixed; font-size: 1.3vmin; color: red  ;"> &nabla;Email should be like this example@example.com</span>
+              
               <input type="text" name="Email" id="Email" placeholder="Email should be like this example@example.com" required />
+              <p id="emailtex" class="hide" style="font-weight: bold; position: sticky; font-size: 1.5vmin; color: red  ;"> &nabla;Email should be like this example@example.com</p>
               
             </div>
             <div class="input-box" >
               
               <span class="details">confirm your email</span>
-              <span id="confirmemailtex" class="hide" style="position: fixed; font-size: 1.3vmin; color: red  ;">Email Don't match</span>
+             
               <input type="text" id="confirm-your-email" placeholder="Enter your email" required />
+              <p id="confirmemailtex" class="hide" style="font-weight: bold; position: sticky; font-size: 1.5vmin; color: red  ;">Email Don't match</p>
             </div>
             <div class="input-box">
               
               <span class="details">Password</span>
-              <span id="Passwordtex" class="hide" style="position: fixed; font-size: 1.3vmin; color: red  ;">Password must contain capital and small letters,numbers <br> and a symbol</span>
+             
               <input type="password"  id="Password" placeholder="must be capital and small letters,numbers and a symbol" required />
+              <p id="Passwordtex" class="hide" style=" font-weight: bold; position: sticky; font-size: 1.5vmin; color: red  ;">Password must contain capital and small letters,numbers <br> and a symbol</p>
             </div>
             <div class="input-box" >
               
               <span class="details">Confirm Password</span>
-              <span id="ConfirmPasswordtex" class="hide" style="position: fixed; font-size: 1.3vmin; color: red  ;">The two passwords doesn't match</span>
+             
               <input type="password" id="Confirm-Password" placeholder="Confirm your password" required />
+              <p id="ConfirmPasswordtex" class="hide" style= "font-weight: bold; position: sticky; font-size: 1.5vmin; color: red  ;">The two passwords doesn't match</p>
             </div>
           </div>
 
 
         
-          <span id="quiztypetex" class="hide" style="position: fixed; font-size: 2vmin; color: red  ;">Please select Quiz:</span>
+          <span id="quiztypetex" class="hide" style="font-weight: bold; position: fixed; font-size: 2vmin; color: red  ;">Please select Quiz:</span>
             <select class="quiztype" name="" id="quiztype">
               <option value="0">Select your Quiz</option>
 

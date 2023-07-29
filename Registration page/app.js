@@ -1,3 +1,5 @@
+let firstNametex=document.querySelector("#firstNametex")
+let secondNametex=document.querySelector("#secondNametex")
 let emailtex = document.querySelector("#emailtex");
 let confirmemailtex = document.querySelector("#confirmemailtex");
 let Passwordtex = document.querySelector("#Passwordtex");
@@ -13,8 +15,8 @@ function RestoreData() {
 }
 function validation(event) {
   let registerForm = document.getElementById("registerForm").value;
-  let firstName = document.querySelector("#first-Name").value;
-  let secondName = document.querySelector("#second-Name").value;
+  let firstName = document.querySelector("#firstNameinput").value;
+  let secondName = document.querySelector("#secondNameinput").value;
   let username = document.querySelector("#Username").value;
   let email = document.querySelector("#Email").value;
   let phoneNumber = document.querySelector("#Phone-Number").value;
@@ -42,6 +44,12 @@ function validation(event) {
   if (username == "") alert("User name required");
   else if (!filter.test(email)) {
     emailtex.classList.remove("hide");
+    event.preventDefault();}
+  else if (!letters.test(firstName)) {
+    firstNametex.classList.remove("hide");
+    event.preventDefault();}
+  else if (!letters.test(secondName)) {
+    secondNametex.classList.remove("hide");
     event.preventDefault();
   } else if (confirmoEmail != email) {confirmemailtex.classList.remove("hide");
      event.preventDefault();}
