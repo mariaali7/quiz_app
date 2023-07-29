@@ -2,10 +2,13 @@
    margin: 0; 
    padding: 0;
    font-family: sans-serif;
-   box-sizing: border-box;
+   box-sizing: border-box; 
+   
 }
 body{
-    background-color: #001e4d;
+    height: 100vh;
+    width: 100%;
+    background:  linear-gradient(115deg, #56d8e4 10%, #1d3670 90%);
 }
 .app{
 background-color: #fff;
@@ -20,7 +23,10 @@ padding: 30px;
    color: #001e4d;
    font-weight: 600;
    border-bottom: 1px solid #333;
-   padding-bottom: 30px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   /* padding-bottom: 30px; */
 }
 .quiz {
     padding: 20px 0;
@@ -80,3 +86,11 @@ font-weight: bold;
         .quiz_app .results span.perfect {
             color: #0075ff;
             }
+
+#timer{
+    margin-bottom: 3vh;
+}
+
+.clicked{
+    background-color: rgb(219, 234, 248);
+}

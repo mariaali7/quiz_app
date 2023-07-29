@@ -8,6 +8,7 @@ let scoreContainer = document.querySelector(".score-container");
 let restart = document.getElementById("restart");
 let userScore = document.getElementById("user-score");
 let startScreen = document.querySelector(".start-screen");
+const timerElement = document.getElementById("timer");
 let startButton = document.getElementById("start-button");
 let questionCount;
 let scoreCount = 0;
@@ -16,8 +17,10 @@ let countdown;
 let quizArray = [];
 let Data = JSON.parse(localStorage.getItem("userData"));
 console.log(Data.quiztype);
-//Questions and Options array
-
+timeLeft = 300; 
+let timerInterval;
+// 5 minutes in seconds
+;//Questions and Options array
 if (Data.quiztype == "Js") {
   quizArray = [
     {
@@ -346,6 +349,7 @@ nextBtn.addEventListener(
       //hide question container and display score
       displayContainer.classList.add("hide");
       scoreContainer.classList.remove("hide");
+
       //user score
       userScore.innerHTML =
         "Your score is " + scoreCount *10 + "% out of " + questionCount *10 +"%";
@@ -365,20 +369,26 @@ nextBtn.addEventListener(
       localStorage.setItem("quizArray", JSON.stringify(quizArray));
       localStorage.setItem("scoreCount" , JSON.stringify(scoreCount));
     }
+    nextBtn.style.display = "block";
+
   })
 );
 
-//Timer
-const timerDisplay = () => {
-  countdown = setInterval(() => {
-    count--;
-    timeLeft.innerHTML = `${count}s`;
-    if (count == 0) {
-      clearInterval(countdown);
-      displayNext();
+function startTimer() {
+  updateTimer();
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    updateTimer();
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      displayContainer.classList.add("hide");
+      scoreContainer.classList.remove("hide");
+      userScore.innerHTML =
+      "Your score is " + scoreCount *10 + "% out of " + questionCount *10 +"%";
     }
   }, 1000);
-};
+}
 
 //Display quiz
 const quizDisplay = (questionCount) => {
@@ -389,6 +399,7 @@ const quizDisplay = (questionCount) => {
   });
   //display current question card
   quizCards[questionCount].classList.remove("hide");
+  nextBtn.style.display = "none";
 };
 
 //Quiz Creation
@@ -426,23 +437,23 @@ function checker(userOption) {
   let question =
     document.getElementsByClassName("container-mid")[questionCount];
   let options = question.querySelectorAll(".option-div");
-
+  nextBtn.style.display = "block";
   //if user clicked answer == correct option stored in object
   if (userSolution === quizArray[questionCount].correct) {
-    userOption.classList.add("correct");
+    userOption.classList.add("clicked");
     scoreCount++;
   } else {
-    userOption.classList.add("incorrect");
+    userOption.classList.add("clicked");
     //For marking the correct option
     options.forEach((element) => {
-      if (element.innerText == quizArray[questionCount].correct) {
-        element.classList.add("correct");
-      }
+      // if (element.innerText == quizArray[questionCount].correct) {
+      //   element.classList.add("correct");
+      // }
     });
   }
 
-  //clear interval(stop timer)
-  clearInterval(countdown);
+//   //clear interval(stop timer)
+//   clearInterval(countdown);
   localStorage.setItem(`userAnswer${questionCount}`, userSolution);
   //disable all options
   options.forEach((element) => {
@@ -450,7 +461,11 @@ function checker(userOption) {
   });
   
 }
-
+function updateTimer() {
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
+  timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
 //initial setup
 function initial() {
   quizContainer.innerHTML = "";
@@ -458,7 +473,7 @@ function initial() {
   scoreCount = 0;
   count = 11;
   clearInterval(countdown);
-  timerDisplay();
+  startTimer();
   quizCreator();
   quizDisplay(questionCount);
 }
