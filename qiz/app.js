@@ -141,8 +141,8 @@ if (Data.quiztype == "Js") {
     {
       id: "1",
       question: "Which of the following tag is used to embed css in html page?",
-      options: ["<css>", "<!DOCTYPE html>", "<script>", "<style>"],
-      correct: "<style>",
+      options: ["css", "!DOCTYPE html", "script", "style"],
+      correct: "style",
     },
     {
       id: "2",
@@ -176,8 +176,8 @@ if (Data.quiztype == "Js") {
       id: "6",
       question:
         "Which of the following type of HTML tag is used to define an internal style sheet?",
-      options: ["<script>", "<link>", "<class>", "<style>"],
-      correct: "<style>",
+      options: ["script", "link", "class", "style"],
+      correct: "style",
     },
 
     {
