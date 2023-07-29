@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../bookdark.jpg">
-    <title>quizlet-result page</title>
-    <link rel="stylesheet" href="result.css">
+    <title>result page</title>
 </head>
 <body>
-    <div class="result-container">
-        <h1>Quiz Result</h1>
-        
-    </div>
-
-    <div class="logout">
-        <a href="../index.html" >Log Out</a>
-    </div>
-    
+    <h1>Answers</h1>
+    <table id="tableresult" border="1px">
+        <th>question</th>
+        <th>user answer</th>
+        <th>correct answer</th>
+       
+    </table>
 </body>
-<script src="result.js"></script>
 </html>
+<script>
+    window.location.hash = "no-back-button";
+
+    // Again because Google Chrome doesn't insert
+    // the first hash into the history
+    window.location.hash = "Again-No-back-button"; 
+
+    window.onhashchange = function(){
+        window.location.hash = "no-back-button";
+    }
+</script>
+<script src="result.js"></script>

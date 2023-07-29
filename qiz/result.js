@@ -7,39 +7,23 @@ document.addEventListener("DOMContentLoaded", () => {
         userAnswers[i] = userAnswer;
     }
 
- //Display the questions and user answers
-    const resultContainer = document.querySelector(".result-container");
-    quizArray.forEach((question, index) => {
-        const questionElement = document.createElement("div");
-        questionElement.innerHTML = `
-            <h3>Question ${index + 1}:</h3>
-            <p>Question : ${question.question}</p>
-            <p>Your Answer: ${userAnswers[index] || "Not answered"}</p>
-            <p>Correct Answer: ${question.correct}</p>
-            <hr>
-        `;
-        resultContainer.appendChild(questionElement);
+
+
+    // Display the questions and user answers in a table
+    let table = document.querySelector("#tableresult")
+    quizArray.forEach(function(question , index) {
+        table.innerHTML += `
+        <td>${question.question}</td>
+        <td> ${userAnswers[index] || "not answerd"} </td>
+        <td> $${question.correct}</td>
+        `
     });
-
-    // let table = document.querySelector("#tableresult")
-    // quizArray.forEach(function(question , index) {
-    //     table.innerHTML += `
-           
-    //         <td>${question.question}</td>
-    //         <td> ${userAnswers[index] || "not answerd"} </td>
-    //         <td> $${question.correct}</td>
-    //     `
-    // });
-
-
 });
 
-    
 let score = JSON.parse(localStorage.getItem("scoreCount"));
-if(score >= 5 ){
-    document.body.classList.add("paas")
-}
-else{
-    document.body.classList.add("faild")
+if (score >= 5) {
+    document.body.classList.add("paas");
+} else {
+    document.body.classList.add("failed");
 }
 
