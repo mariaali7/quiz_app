@@ -10,7 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Display the questions and user answers in a table
-    
+    let table = document.querySelector("#tableresult")
+    quizArray.forEach(function(question , index) {
+        table.innerHTML += `
+        <td>${question.question}</td>
+        <td> ${userAnswers[index] || "not answerd"} </td>
+        <td> $${question.correct}</td>
+        `
+    });
 })
 
 let score = JSON.parse(localStorage.getItem("scoreCount"));
