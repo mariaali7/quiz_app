@@ -11,19 +11,20 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     // Display the questions and user answers
-    const resultContainer = document.querySelector(".result-container");
-    quizArray.forEach((question, index) => {
-        const questionElement = document.createElement("div");
-        questionElement.innerHTML = `
-            <h3>Question ${index + 1}:</h3>
-            <p>Question : ${question.question}</p>
-            <p>Your Answer: ${userAnswers[index] || "Not answered"}</p>
-            <p>Correct Answer: ${question.correct}</p>
-            <hr>
+      
+        let table = document.querySelector("#tableresult")
+        quizArray.forEach(function(question , index) {
+            table.innerHTML += `
+               
+                <td>${question.question}</td>
+                <td> ${userAnswers[index] || "not answerd"} </td>
+                <td> $${question.correct}</td>
+            `
+        });
         `;
         resultContainer.appendChild(questionElement);
     });
-});
+
 
 let score = JSON.parse(localStorage.getItem("scoreCount"));
 if(score >= 5 ){
