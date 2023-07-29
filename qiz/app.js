@@ -20,7 +20,7 @@ console.log(Data.quiztype);
 timeLeft = 300; 
 let timerInterval;
 // 5 minutes in seconds
-;//Questions and Options array
+//Questions and Options array
 if (Data.quiztype == "Js") {
   quizArray = [
     {

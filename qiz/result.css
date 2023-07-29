@@ -60,6 +60,43 @@ hr{
     border-radius: 10px;
     box-shadow: 3px 3px 0 black;
 }
+
+#tableresult {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  #tableresult th,
+  #tableresult td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style the table header */
+  #tableresult th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Change the font color based on the user's answer */
+  #tableresult td:nth-child(2) {
+    color: red;
+  }
+  
+  #tableresult td:nth-child(2)::before {
+    content: "Incorrect: ";
+  }
+  
+  #tableresult td:nth-child(2).correct {
+    color: green;
+  }
+  
+  #tableresult td:nth-child(2).correct::before {
+    content: "Correct: ";
+  }
+
 @media (min-width: 280px) and (max-width: 1000px){
     h1,h3,p{
         font-size: 15px ;
